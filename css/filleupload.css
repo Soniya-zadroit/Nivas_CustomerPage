@@ -1,0 +1,46 @@
+/* File Upload Styles */
+.file-upload-wrapper {
+    margin-top: 10px;
+}
+
+.file-upload-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: transparent;
+    border: 1px dashed #FF9F00;
+    border-radius: 8px;
+    color: #FF9F00;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.file-upload-button:hover {
+    background: rgba(255, 159, 0, 0.1);
+}
+
+.file-upload-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.file-name-display {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #9c9999;
+    word-break: break-all;
+}
+
+.file-size-limit {
+    margin-top: 4px;
+    font-size: 11px;
+    color: #666;
+}
+
+/* Error state */
+.file-name-display.error {
+    color: #ff4444;
+}
+

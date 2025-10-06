@@ -1,0 +1,178 @@
+.nivas-landing {
+    padding-top: 20px;
+    padding-right: 5%;
+    padding-left: 5%;
+    border-top: 0.5px solid var(--secondary-color);
+    overflow: hidden;
+    display: block;
+    width: 100%;
+}
+ 
+.btn-grp {
+    border: 0.5px solid var(--secondary-color);
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: var(--primary-color);
+}
+ 
+.launch-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: var(--primary-color)
+}
+ 
+.txt {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: var(--secondary-color);
+ 
+}
+ 
+.btn-dark {
+    transition: all 0.3s ease;
+    border-radius: 20px;
+}
+ 
+ 
+.nav-group a {
+    transition: color 0.3s ease;
+    font-size: 14px;
+    color: var(--secondary-color);
+ 
+ 
+}
+.nav-group h6{
+    color:var(--primary-color)
+}
+ 
+ 
+.nivas-footer {
+    font-size: 13.23px;
+    font-weight: 400;
+    line-height: 17.64px;
+    letter-spacing: 0.22052204608917236px;
+    color: var(--primary-color);
+    padding-right: 5%;
+    padding-left: 5%;
+    background-color: var(--theme-color);
+ 
+}
+ 
+.text-decoration-none {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+ 
+.check {
+    width: 8px;
+    height: 8px;
+    border-radius: 5px;
+    font-size: 4px;
+}
+ 
+.foot {
+    justify-content: flex-end
+}
+ 
+.email {
+    width: 70%;
+    padding: 12px 140px 12px 20px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 25px;
+    outline: none;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 15px;
+    box-sizing: border-box;
+    background: transparent;
+    color:var(--primary-color)
+}
+ 
+.email::placeholder{
+    color: var(--secondary-color);
+    font-size: 13px;
+}
+ 
+ 
+.emailbtn {
+    padding: 3px 21px;
+    background: var(--primary-color);
+    color: var(--bg-dark);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 14px;
+ 
+}
+ 
+.emailbtn:hover {
+    background:var(--theme-color);
+}
+ 
+@media (max-width: 768px) {
+    .foot {
+        justify-content: flex-start
+    }
+ 
+    .footer-right {
+        flex-direction: column-reverse;
+ 
+    }
+    .email{
+        width: 60%;
+        }
+ 
+}
+.btn-change{
+    border: var(--button-border);
+}
+ 
+.social{
+    border-color:var(--social-color) ;
+    color:var(--social-icon-color) ;
+    background-color:var(--social-bg-color) ;
+}
+ 
+ 
+.emailbtn {
+    padding: 3px 21px;
+    background: var(--primary-color);
+    color: var(--bg-dark);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    position: relative;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emailbtn.error {
+    background: #dc3545;
+}
+
+.loading-spinner, .success-tick, .error-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.error-icon {
+    color: var(--bg-dark);
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translate(-50%, -50%); }
+    25% { transform: translate(calc(-50% - 5px), -50%); }
+    75% { transform: translate(calc(-50% + 5px), -50%); }
+}

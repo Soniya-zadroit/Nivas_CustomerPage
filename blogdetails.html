@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivas - blog</title>
+    <link rel="icon" href="assets/icon/Browsericon.png" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/foot.css">
+    <link rel="stylesheet" href="/css/model.css">
+    <link rel="stylesheet" href="/css/filleupload.css">
+ <!-- Google Tag Manager -->
+ <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PKFWS7H9');</script>
+    <!-- End Google Tag Manager -->
+
+    <style>
+        .responsive-div {
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, -10%);
+            padding: 5%;
+            border-radius: 20px;
+            background-color: #000;
+            width: 90%;
+        }
+
+        /* Styles for tablets (screen width 768px and above) */
+        @media (max-width: 1024px) {
+            .responsive-div {
+                width: 95%;
+                padding: 4%;
+                transform: translate(-50%, -5%);
+            }
+
+            .blog-title {
+                font-size: 1.6rem !important;
+            }
+
+            .blog-subtitle {
+                font-size: 1rem !important;
+            }
+
+
+            .blog-text {
+                font-size: 0.7rem !important;
+            }
+
+            #mobilearticle {
+                margin-top: -50px !important;
+            }
+        }
+
+        /* Styles for mobile screens (screen width 767px and below) */
+        @media (max-width: 767px) {
+            .responsive-div {
+                width: 100%;
+                padding: 3%;
+                transform: translate(-50%, 0);
+                border-radius: 0px;
+                /* Slightly reduce border radius for small screens */
+            }
+
+            .blog-title {
+                font-size: 1.6rem !important;
+            }
+
+            .blog-subtitle {
+                font-size: 1rem !important;
+            }
+
+            .blog-text {
+                font-size: 0.7rem !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="loader-wrapper">
+        <img src="assets/icon/nivas loading anim.gif" alt="Loading..." class="loader-gif">
+    </div>
+    <div class="content-wrapper">
+
+        <!-- <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                <div class="theme-switch desktop-theme-switch ms-auto">
+                    <span class="mode-text">Light Mode</span>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="themeSwitch"
+                            aria-label="Toggle theme">
+                    </div>
+                </div>
+
+
+                <div class="mobile-nav-controls ms-auto">
+                    <div class="theme-switch mobile-theme-switch">
+                        <span class="mode-text">Light Mode</span>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="themeSwitchMobile"
+                                aria-label="Toggle theme">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav> -->
+
+
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <!-- Logo and separator -->
+                <a href="index.html">
+                    <img class="navbar-brand logo" src="assets/Logo/Logo.png" alt="Logo">
+                </a>
+                <!-- <a class="navbar-brand logo" href="index.html">nivas</a> -->
+                <span class="nav-separator">|</span>
+
+                <!-- Navigation items and theme switch for desktop -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <!-- Company Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="companyDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Company
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="companyDropdown">
+                                <li><a class="dropdown-item" about-modal-target="About Us" id="cursor">About Us</a></li>
+                                <li><a class="dropdown-item" about-modal-target="Who We Are" id="cursor">Who We Are</a>
+                                </li>
+                                <li><a class="dropdown-item" data-modal-target="leadership" id="cursor">Team</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Early Access (Now as a standalone item) -->
+                        <li class="nav-item">
+                            <a id="cursor" data-form-type="Early Access" class="nav-link enquiry">Early Access</a>
+                        </li>
+
+                        <!-- Contact Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Contact
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="contactDropdown">
+                                <li><a id="cursor" data-form-type="Brand Enquiry" class="dropdown-item enquiry">Brand
+                                        Enquiry</a></li>
+                                <li><a id="cursor" data-form-type="Investor Relations"
+                                        class="dropdown-item enquiry">Investor Relations</a></li>
+                                <li><a id="cursor" data-form-type="Join Us" class="dropdown-item enquiry">Join Us</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Other Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="otherDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Other
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="otherDropdown">
+                                <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- Theme switch for desktop -->
+                    <div class="theme-switch desktop-theme-switch">
+                        <span class="mode-text">Light Mode</span>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="themeSwitch"
+                                aria-label="Toggle theme">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile controls -->
+                <div class="mobile-nav-controls">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="theme-switch mobile-theme-switch">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="themeSwitchMobile"
+                                aria-label="Toggle theme">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="col-md-12">
+            <div style="position: relative;">
+                <!-- Image Container -->
+                <div class="image-container mt-4">
+                    <img src="assets/Article/Shopping.png" class="mt-5" style="object-fit: cover; width: 100%;">
+                </div>
+                <div class="col-md-12 responsive-div">
+                    <h1 class="blog-subtitle text-end"> Date : 22.01.2025</h1>
+                    <h1 class="blog-title text-white text-center">
+                        Celebrity Marketplace
+                    </h1>
+                    <p class="mt-3 text-end" style="color: white"> Author : Dr. Seetharaman Kannan</p>
+                    <div class="blog-text mt-4">
+                        <p style="font-size: 1.4rem;">Building a celebrity brand-based marketplace, involves a
+                            well-deﬁned strategy to
+                            differentiate it from traditional e-commerce platforms. Here's how to achieve competitive
+                            edge, stickiness, and cost efficiency:</p>
+                        <h1 class="blog-subtitle mt-5"> Differentiated Offerings</h1>
+                        <p>To stand out, focus on unique value propositions that emphasize exclusivity, authenticity,
+                            and engagement:</p>
+                        <h1 class="blog-subtitle1"> Exclusive Celebrity Collections:</h1>
+                        <ul class="custom-bullet">
+                            <li>Feature limited-edition or signature collections directly designed or curated by
+                                celebrities.</li>
+                        </ul>
+                        <ul class="custom-bullet">
+                            <li>Provide options for personalized products signed or endorsed by the celebrity.</li>
+                        </ul>
+
+                        <h1 class="blog-subtitle1"> Experiential Shopping:</h1>
+                        <ul class="custom-bullet">
+                            <li>Celebrity Engagement: Host live-streamed events, Q&A sessions, or product drops with
+                                celebrities.</li>
+                        </ul>
+                        <ul class="custom-bullet">
+                            <li>Behind-the-Scenes Access: Showcase how products are created or involve customers in the
+                                process through polls or votes.</li>
+                        </ul>
+
+                        <h1 class="blog-subtitle1"> Cause-Driven Shopping:</h1>
+                        <ul class="custom-bullet">
+                            <li>Collaborate with celebrities on collections that support social or environmental causes.
+                            </li>
+                        </ul>
+                        <ul class="custom-bullet">
+                            <li>Highlight stories around sustainability, ethical sourcing, or charitable contributions.
+                            </li>
+                        </ul>
+
+                        <h1 class="blog-subtitle1"> Personalization and AI Integration:</h1>
+                        <ul class="custom-bullet">
+                            <li>AI-driven recommendations based on user preferences and browsing behavior.</li>
+                        </ul>
+                        <ul class="custom-bullet">
+                            <li>Virtual try-ons for fashion and accessories, leveraging AR/VR.</li>
+                        </ul>
+
+                        <h1 class="blog-subtitle1"> Subscription Plans:</h1>
+                        <ul class="custom-bullet">
+                            <li>Offer premium memberships with perks like early access to new drops, exclusive
+                                discounts, or monthly celebrity-curated boxes.</li>
+                        </ul>
+                        <ul class="custom-bullet">
+                            <li>Virtual try-ons for fashion and accessories, leveraging AR/VR.</li>
+                        </ul>
+
+
+
+
+
+                        <h1 class="blog-subtitle mt-5"> Sticky ESS (Emotional, Social, Structural)</h1>
+                        <p>To create a long-term customer loyalty:</p>
+                        <h1 class="blog-subtitle1"> Emotional:</h1>
+                        <ul class="custom-bullet">
+                            <li>Celebrity-Fan Connection: Let customers feel closer to their idols through exclusive
+                                content, personalized messages, or thank-you notes.</li>
+                        </ul>
+                        <ul class="custom-bullet">
+                            <li>Gamiﬁcation: Introduce points or rewards for engagement (e.g., social media shares,
+                                reviews) that can be redeemed for discounts or exclusive experiences.</li>
+                        </ul>
+
+                        <h1 class="blog-subtitle1"> Social:</h1>
+                        <ul class="custom-bullet">
+                            <li>Community Building: Create forums or groups where fans can connect, discuss, and share
+                                their purchases.</li>
+                        </ul>
+                        <ul class="custom-bullet">
+                            <li>Inﬂuencer Collaborations: Leverage micro-inﬂuencers to amplify campaigns with relatable,
+                                authentic content.</li>
+                        </ul>
+
+                        <h1 class="blog-subtitle1"> Structural:</h1>
+                        <ul class="custom-bullet">
+                            <li>Loyalty Program: Tiered beneﬁts based on purchase frequency or spend.</li>
+                        </ul>
+                        <ul class="custom-bullet">
+                            <li>Smart Reordering: Offer AI-powered reordering options for repeat customers on
+                                essentials.</li>
+                        </ul>
+
+
+
+
+
+
+                        <h1 class="blog-subtitle mt-5"> Logistics and Return Management</h1>
+                        <p>Given high competition and the cost sensitivity of e-commerce, an efficient logistics
+                            strategy is crucial:</p>
+                        <h1 class="blog-subtitle1"> Logistics Cost Reduction:</h1>
+                        <ul class="custom-bullet">
+                            <li>Partnerships: Work with third-party logistics (3PL) providers specializing in celebrity
+                                brand merchandising.</li>
+                        </ul>
+                        <ul class="custom-bullet">
+                            <li>Warehousing: Opt for a distributed warehouse network to enable faster deliveries and
+                                reduce shipping distances.</li>
+                        </ul>
+                        <ul class="custom-bullet">
+                            <li>Demand Prediction: Use AI to forecast demand patterns and minimize overstocking or
+                                understocking.</li>
+                        </ul>
+                        <h1 class="blog-subtitle1"> Return Cost Optimization:</h1>
+                        <ul class="custom-bullet">
+                            <li>Detailed Product Descriptions: Include high-quality images, videos, and accurate sizing
+                                guides to reduce mismatched expectations.</li>
+                        </ul>
+                        <ul class="custom-bullet">
+                            <li>Virtual Try-Ons: Use AR/VR for try-before-you-buy experiences, especially for apparel
+                                and accessories.</li>
+                        </ul>
+                        <ul class="custom-bullet">
+                            <li>Return Fees: Consider charging nominal fees for returns or provide incentives (e.g.,
+                                store credits) to dissuade unnecessary returns.</li>
+                        </ul>
+                        <ul class="custom-bullet">
+                            <li>Reverse Logistics Partnerships: Collaborate with local delivery networks to cut costs
+                                for return pickups.</li>
+                        </ul>
+                        <h1 class="blog-subtitle1"> Sustainable Returns:</h1>
+                        <ul class="custom-bullet">
+                            <li>Offer eco-friendly alternatives like donation programs for returns to align with social
+                                responsibility.</li>
+                        </ul>
+
+
+
+
+
+
+                        <h1 class="blog-subtitle mt-5"> Competitive Branding</h1>
+                        <p>Position Nivas – House of Celebrities as The Go-To Marketplace for Celebrity Brands by
+                            emphasizing:</p>
+
+                        <ul class="custom-bullet">
+                            <li>Trustworthiness: Offer certiﬁcates of authenticity for products.</li>
+                        </ul>
+                        <ul class="custom-bullet">
+                            <li>Exclusivity: Build FOMO through limited-time collaborations and pop-up sales.</li>
+                        </ul>
+                        <ul class="custom-bullet">
+                            <li>Tech-Savvy: Showcase AR/VR shopping, blockchain authenticity tracking, and seamless
+                                payment options.</li>
+                        </ul>
+
+
+
+                        <h1 class="blog-subtitle mt-5"> Marketing and Growth Strategies</h1>
+
+                        <h1 class="blog-subtitle1"> Partnerships:</h1>
+
+                        <ul class="custom-bullet">
+                            <li>Partner with emerging celebrities to co-launch brands and establish mutually beneﬁcial
+                                agreements.</li>
+                        </ul>
+
+                        <h1 class="blog-subtitle1"> Inﬂuencer-Led Campaigns:</h1>
+
+                        <ul class="custom-bullet">
+                            <li>Engage inﬂuencers who resonate with your target demographic to amplify reach.</li>
+                        </ul>
+
+                        <h1 class="blog-subtitle1"> Social Media Virality:</h1>
+                        <ul class="custom-bullet">
+                            <li>Focus on platforms like TikTok and Instagram for creative, shareable content, such as
+                                unboxings or behind-the-scenes videos.</li>
+                        </ul>
+
+                        <h1 class="blog-subtitle1"> PR Stunts:</h1>
+                        <ul class="custom-bullet">
+                            <li>Organize celebrity-run pop-up events or ﬂash sales.</li>
+                        </ul>
+
+
+                        <h1 class="blog-subtitle1"> Data-Driven Targeting:</h1>
+                        <ul class="custom-bullet">
+                            <li>Utilize analytics to hyper-target customers with ads tailored to their favorite
+                                celebrities.</li>
+                        </ul>
+
+                        <p class="mt-5">By focusing on these strategies, Nivas – House of Celebrities can establish a
+                            differentiated brand identity, foster strong customer loyalty, and maintain efficient
+                            operations, ultimately competing successfully with larger, established marketplaces.</p>
+
+                    </div>
+
+                </div>
+
+                <!-- <div class="col-md-12 responsive-div">
+                    <h1 class="blog-title text-white">
+                        Revamp Your Online Shopping Experience with Nivas EORS: Exceptional
+                        Features for a Delightful
+                        Journey
+                    </h1>
+                    <div class="blog-text mt-4">
+                        <p>Experience the Spectacular 18th Edition of EORS: Over 20 lakh
+                            fashion, beauty, and lifestyle
+                            products from 6000+ esteemed domestic, international, and D2C
+                            brands await you. Nivas is
+                            committed to providing an unparalleled shopping journey during
+                            Nivas EORS 18, fulfilling
+                            every fashionista's ultimate desires while maximizing their
+                            value.</p>
+
+                        <p>Here are the 5 cool features that customers must definitely check
+                            out and use to shop during
+                            EORS.</p>
+
+                        <p>Size and Style Exchange – Introduced to enhance the end-to-end
+                            shopping journey of the
+                            shopper, Nivas open-ended feature, Size, and Style Exchange,
+                            allows you to exchange the size
+                            of the existing product or choose a completely new product from
+                            the app, giving shoppers a
+                            hassle-free return and exchange experience. You must pay the
+                            additional amount if the new
+                            item's cost exceeds the original item's. Conversely, should the
+                            price of the new item be
+                            lower than that of the original, the variance will be promptly
+                            refunded to either your
+                            designated source account or to your Nivas credit account,
+                            depending on your preference. 
+                        </p>
+
+                        <p>Experience the Spectacular 18th Edition of EORS: Over 20 lakh
+                            fashion, beauty, and lifestyle
+                            products from 6000+ esteemed domestic, international, and D2C
+                            brands await you. Nivas is
+                            committed to providing an unparalleled shopping journey during
+                            Nivas EORS 18, fulfilling
+                            every fashionista's ultimate desires while maximizing their
+                            value.</p>
+
+                        <p>Here are the 5 cool features that customers must definitely check
+                            out and use to shop during
+                            EORS.
+                            Size and Style Exchange – Introduced to enhance the end-to-end
+                            shopping journey of the
+                            shopper, Nivas open-ended feature, Size, and Style Exchange,
+                            allows you to exchange the size
+                            of the existing product or choose a completely new product from
+                            the app, giving shoppers a
+                            hassle-free return and exchange experience. You must pay the
+                            additional amount if the new
+                            item's cost exceeds the original item's. Conversely, should the
+                            price of the new item be
+                            lower than that of the original, the variance will be promptly
+                            refunded to either your
+                            designated source account or to your Nivas credit account,
+                            depending on your preference. 
+                        </p>
+                    </div>
+                    <img src="assets/Article/Article.png" class="mt-2"
+                        style="object-fit: cover; width: 100%; border-radius: 20px;">
+                    <div class="blog-text mt-4">
+                        <p>
+                            Experience the Spectacular 18th Edition of EORS: Over 20 lakh
+                            fashion, beauty, and lifestyle
+                            products from 6000+ esteemed domestic, international, and D2C
+                            brands await you. Nivas is
+                            committed to providing an unparalleled shopping journey during
+                            Nivas EORS 18, fulfilling
+                            every
+                            fashionista's ultimate desires while maximizing their value.
+                        </p>
+                        <p>
+                            Size and Style Exchange – Introduced to enhance the end-to-end
+                            shopping journey of the
+                            shopper, Nivas open-ended feature, Size, and Style Exchange,
+                            allows you to exchange the size
+                            of the existing product or choose a completely new product from
+                            the app, giving shoppers a
+                            hassle-free return and exchange experience. You must pay the
+                            additional amount if the new
+                            item's cost exceeds the original item's. Conversely, should the
+                            price of the new item be
+                            lower than that of the original, the variance will be promptly
+                            refunded to either your
+                            designated source account or to your Nivas credit account,
+                            depending on your preference. 
+                        </p>
+                        <p>
+                            Size and Style Exchange – Introduced to enhance the end-to-end
+                            shopping journey of the
+                            shopper, Nivas open-ended feature, Size, and Style Exchange,
+                            allows you to exchange the size
+                            of the existing product or choose a completely new product from
+                            the app, giving shoppers a
+                            hassle-free return and exchange experience. You must pay the
+                            additional amount if the new
+                            item's cost exceeds the original item's. Conversely, should the
+                            price of the new item be
+                            lower than that of the original, the variance will be promptly
+                            refunded to either your
+                            designated source account or to your Nivas credit account,
+                            depending on your preference. 
+                        </p>
+                    </div>
+                </div> -->
+                <!-- <div class="col-md-12 responsive-div">
+                    <h1 class="blog-title text-white"></h1>
+                    <div class="blog-text mt-4"></div>
+                    <img src="" class="mt-2" style="object-fit: cover; width: 100%; border-radius: 20px;">
+                    <div class="blog-text mt-4"></div>
+                </div> -->
+            </div>
+        </div>
+        <!-- <div class="container py-5" id="mobilearticle">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h1 class="section-title mb-0">Related articles</h1>
+                <a href="#" class="browse-link">Browse all topics <i class="fas fa-chevron-right ms-2"></i></a>
+            </div>
+
+            <div class="row g-4">
+                
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="blogdetails.html " style="text-decoration: none; color: inherit;">
+                        <article class="article-card">
+                            <img src="assets/Article/Shopping.png" alt="Shopping Experience" class="article-image">
+                            <div class="article-content">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="article-meta">By Nivas • Jan 10, 2025</div>
+                                    <button class="share-btn" onclick="event.preventDefault(); toggleShareMenu(this)">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                    <div class="share-menu">
+                                        <div class="share-icon whatsapp">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </div>
+                                        <div class="share-icon facebook">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </div>
+                                        <div class="share-icon twitter">
+                                            <i class="fab fa-twitter"></i>
+                                        </div>
+                                        <div class="share-icon linkedin">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2 class="article-title">Revamp Your Online Shopping Experience with Nivas EORS:
+                                    Exceptional Features for a ...</h2>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="blogdetails.html " style="text-decoration: none; color: inherit;">
+                        <article class="article-card">
+                            <img src="assets/Article/Shopping.png" alt="Shopping Experience" class="article-image">
+                            <div class="article-content">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="article-meta">By Nivas • Jan 10, 2025</div>
+                                    <button class="share-btn" onclick="event.preventDefault(); toggleShareMenu(this)">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                    <div class="share-menu">
+                                        <div class="share-icon whatsapp">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </div>
+                                        <div class="share-icon facebook">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </div>
+                                        <div class="share-icon twitter">
+                                            <i class="fab fa-twitter"></i>
+                                        </div>
+                                        <div class="share-icon linkedin">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2 class="article-title">Revamp Your Online Shopping Experience with Nivas EORS:
+                                    Exceptional Features for a ...</h2>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="blogdetails.html " style="text-decoration: none; color: inherit;">
+                        <article class="article-card" style="cursor: pointer;">
+                            <img src="assets/Article/Shopping.png" alt="Shopping Experience" class="article-image">
+                            <div class="article-content">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="article-meta">By Nivas • Jan 10, 2025</div>
+                                    <button class="share-btn" onclick="event.preventDefault(); toggleShareMenu(this)">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                    <div class="share-menu">
+                                        <div class="share-icon whatsapp">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </div>
+                                        <div class="share-icon facebook">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </div>
+                                        <div class="share-icon twitter">
+                                            <i class="fab fa-twitter"></i>
+                                        </div>
+                                        <div class="share-icon linkedin">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2 class="article-title">Revamp Your Online Shopping Experience with Nivas EORS:
+                                    Exceptional Features for a ...</h2>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="container py-5"  id="mobilearticle" id="cardtopmobile" style="display: none;">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h1 class="section-title mb-0">Related articles</h1>
+                <a href="#" class="browse-link">Browse all topics <i class="fas fa-chevron-right ms-2"></i></a>
+            </div>
+            <div class="row g-4">
+
+            </div>
+        </div> -->
+    </div>
+
+
+    <section class="nivas-landing" id="nivas-landing" style="top:20%">
+        <div class="">
+            <div class="row bgop">
+
+                <!-- Main Content -->
+                <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
+                    <!-- Left Section -->
+                    <div class="col-md-6 mb-5">
+                        <div class="nivas-logo">
+                            <a href="index.html">
+                                <img class="navbar-brand logo" src="assets/Logo/Logo.png" alt="Logo">
+                            </a>
+                        </div>
+                        <p class="text-secondary txt m-1 mt-3">Heard Of Celebrity To Consumer
+                            Platform?</p>
+                        <p class="text-secondary txt mb-3">Stay Tuned!</p>
+
+                        <div class="d-flex gap-3 mb-4">
+                            <input type="email" class="email bg-transparent border-secondary px-3"
+                                placeholder="Type your email address" style="max-width: 250px;"
+                                aria-label="Email Address" required>
+                            <button data-email-click class="emailbtn">
+                                <span class="button-text">Submit</span>
+                                <span class="loading-spinner d-none">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                </span>
+                                <span class="success-tick d-none">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                                <span class="error-icon d-none">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </span>
+                            </button>
+                        </div>
+
+
+
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a href="#" class="btn  btn-dark d-flex align-items-center justify-content-center"
+                                style="width: 40px; height: 40px;" aria-label="Discord">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                            <a href="#"
+                                class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center"
+                                style="width: 40px; height: 40px;" aria-label="Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#"
+                                class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center"
+                                style="width: 40px; height: 40px;" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#"
+                                class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center"
+                                style="width: 40px; height: 40px;" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Section -->
+                    <div class="col-md-6 mb-5 ">
+                        <nav class="d-flex gap-3 flex-wrap foot">
+                            <div class="nav-group">
+                                <h6 class="mb-3">Company</h6>
+                                <ul class="list-unstyled">
+                                    <li><a class="text-secondary text-decoration-none" about-modal-target="About Us"
+                                            id="cursor">About
+                                            Us</a></li>
+                                    <li><a class="text-secondary text-decoration-none" about-modal-target="Who We Are"
+                                            id="cursor">Who
+                                            We Are</a></li>
+                                    <li><a class="text-secondary text-decoration-none" data-modal-target="leadership"
+                                            id="cursor">Team</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="nav-group">
+                                <h6 class="mb-3">Contact</h6>
+                                <ul class="list-unstyled">
+                                    <li><a id="cursor" data-form-type="Brand Enquiry"
+                                            class="text-secondary text-decoration-none enquiry">Brand
+                                            Enquiry</a>
+                                    </li>
+                                    <li><a id="cursor" data-form-type="Investor Relations"
+                                            class="text-secondary text-decoration-none enquiry">Investor
+                                            Relations</a></li>
+                                    <li><a id="cursor" data-form-type="Early Access"
+                                            class="text-secondary text-decoration-none enquiry">Early
+                                            Access</a>
+                                    </li>
+                                    <li><a id="cursor" data-form-type="Join Us" data-form-type="Brand Enquiry"
+                                            class="text-secondary text-decoration-none enquiry">
+                                            join Us</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="nav-group">
+                                <h6 class="mb-3">Other</h6>
+                                <ul class="list-unstyled">
+                                    <li><a href="blog.html" class="text-secondary text-decoration-none">Blog</a></li>
+                                    <li><a href="faq.html" class="text-secondary text-decoration-none">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+
+                </div>
+
+                <!-- Launching Soon Section -->
+                <div class="col-12 mb-5">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                        <div class="d-flex align-items-center">
+                            <span class="me-2" style="font-size: 30px; position: relative; display: inline-block;">●
+                                <span
+                                    style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color: black; font-size: 14px; margin-top: 3px;">✓</span>
+                            </span>
+                            <span class="launch-text">Launching Soon on</span>
+                        </div>
+                        <div class="d-flex gap-3 flex-wrap ">
+                            <button class="btn btn-grp btn-change">
+                                <i class="fab fa-windows me-2  btn-change"></i> Windows
+                            </button>
+                            <button class="btn btn-grp  btn-change">
+                                <i class="fab fa-apple me-2"></i> macOS
+                            </button>
+                            <button class="btn btn-grp  btn-change">
+                                <i class="fab fa-apple me-2"></i> iOS
+                            </button>
+                            <button class="btn btn-grp  btn-change">
+                                <i class="fab fa-android me-2"></i> Android
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="nivas-footer py-3" id="nivas-landing">
+        <div class="">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 footer-right">
+                <div>© 2024 All Rights Reserved to Naaysu Technologies Pvt ltd</div>
+                <div class="d-flex gap-4 flex-wrap">
+                    <a href="#" class="text-decoration-none">Terms of Service</a>
+                    <a href="#" class="text-decoration-none">Privacy Policy</a>
+                    <a href="#" class="text-decoration-none">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+
+    <!-- Modal Structure -->
+    <div class="contact-modal" id="enquiryModal">
+        <div class="contact-modal__container">
+            <div class="contact-modal__drag">
+                <div class="contact-modal__drag-bar"></div>
+            </div>
+
+            <div class="contact-modal__media">
+                <img id="modalImage" src="" alt="Featured Image" class="contact-modal__image">
+            </div>
+            <div class="contact-modal__content">
+                <div id="contactForm" class="contact-form">
+                    <div class="contact-form__header">
+                        <h1 id="modalTitle" class="contact-form__title titlecolour"></h1>
+                    </div>
+                    <div class="contact-form__intro">
+                        <p class="contact-form__text">
+                            <span id="modalSubtitle" class="contact-form__subtitle"></span>
+                            <span id="font" class="contact-form__prompt" style="font-weight: 400;"></span>
+                        </p>
+                    </div>
+                    <form id="enquiryForm" class="contact-form__fields needs-validation" novalidate>
+                        <div id="formFields" class="contact-form__inputs"></div>
+                        <button type="submit" class="contact-form__submit mt-4" style="float: right;">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="leadership-modal" id="leadershipModal">
+        <div class="leadership-modal__container">
+            <div class="leadership-modal__drag">
+                <div class="leadership-modal__drag-bar"></div>
+            </div>
+
+            <div class="leadership-modal__content">
+                <h1 class="leadership-modal__title titlecolour">Our Leadership</h1>
+
+                <div class="leadership-modal__carousel-container">
+                    <button class="nav-arrow nav-prev" aria-label="Previous">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <div class="leadership-modal__cards">
+
+
+                        <!-- Card 1 -->
+                        <div class="leader-card">
+                            <div class="leader-card__image-wrapper">
+                                <img src="assets/team/img1.png" alt="Naveen Kumar" class="leader-card__image">
+                                <a href="#" class="leader-card__linkedin">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                            <div class="leader-card__info">
+                                <h2 class="leader-card__name">Naveen Kumar</h2>
+                                <h3 class="leader-card__title titlecolour">Founder & CEO</h3>
+                                <p class="leader-card__bio">Ex SAP - Incture Traform OYO. 3rd generation
+                                    business
+                                    owner
+                                    having diverse backgrounds across Industries. Extensive knowledge in
+                                    digital
+                                    product
+                                    building having scaled both consumer platforms as well as Saas
+                                    platforms. An
+                                    individual having the knack of identifying problems/gaps and address
+                                    them with
+                                    solutions</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="leader-card">
+                            <div class="leader-card__image-wrapper">
+                                <img src="assets/team/img2.png" alt="Venugopal S" class="leader-card__image">
+                                <a href="#" class="leader-card__linkedin">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                            <div class="leader-card__info">
+                                <h2 class="leader-card__name">Venugopal S</h2>
+                                <h3 class="leader-card__title titlecolour">Founder</h3>
+                                <p class="leader-card__bio">A seasoned veteran in the fashion industry
+                                    with over 30
+                                    years of sourcing and executing on demand fashion for large retail
+                                    brands/enterprise
+                                    customers. Highly networked individual among fabrics/apparel
+                                    manufacturers
+                                    across
+                                    South-East Asia.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="leader-card">
+                            <div class="leader-card__image-wrapper">
+                                <img src="assets/team/img3.png" alt="Dipak Mamdapure" class="leader-card__image">
+                                <a href="#" class="leader-card__linkedin">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                            <div class="leader-card__info">
+                                <h2 class="leader-card__name">Dipak Mamdapure</h2>
+                                <h3 class="leader-card__title titlecolour">Co-Founder</h3>
+                                <p class="leader-card__bio">18 years of technology experience, having
+                                    contributed to
+                                    complex product building during his tenure. Extensive technical
+                                    knowledge to
+                                    scale
+                                    digital platforms to manage heavy load of transactions.</p>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="leader-card">
+                            <div class="leader-card__image-wrapper">
+                                <img src="assets/team/img4.png" alt="Seetharaman Kannan" class="leader-card__image">
+                                <a href="#" class="leader-card__linkedin">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                            <div class="leader-card__info">
+                                <h2 class="leader-card__name">Dr Seetharaman Kannan</h2>
+                                <h3 class="leader-card__title titlecolour">Co-Founder</h3>
+                                <p class="leader-card__bio">Ex Eastman brands, Hue trap Police brand
+                                    F-Square.
+                                    Seasoned
+                                    professional with over 30 years in the fashion/apparel industry.
+                                    Built prominent
+                                    brands from scratch and scaled to multi million dollar brands</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="nav-arrow nav-next" aria-label="Next">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contact-modal" id="aboutModal">
+        <div class="contact-modal__container">
+            <div class="contact-modal__drag">
+                <div class="contact-modal__drag-bar"></div>
+            </div>
+
+            <div class="contact-modal__media">
+                <img id="modalImage" src="assets/About/about.png" alt="Nivas Inc History" class="contact-modal__image">
+            </div>
+
+            <div class="contact-modal__content">
+                <div class="contact-form">
+                    <div class="contact-form__header">
+                        <h1 class="contact-form__title contenttitle titlecolour">About Us</h1>
+                    </div>
+
+                    <div class="contact-form__intro"
+                        style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                        <p class="contact-form__text contentp">
+                            Nivas inc. 1991 since has been the forerunner of on-demand and sustainable
+                            fashion in
+                            retail & enterprise industries.
+                        </p>
+                        <p class="contact-form__text contentp1">
+                            Our company aims to cater to consumers of all preferences, through our
+                            global outreach &
+                            network, we maintain their quality goals. Today, we are working with large
+                            retail labels
+                            & enterprise customers such as airlines, schools and hospitals.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-modal" id="whoWeAreModal">
+        <div class="contact-modal__container">
+            <div class="contact-modal__drag">
+                <div class="contact-modal__drag-bar"></div>
+            </div>
+
+            <div class="contact-modal__media">
+                <img id="modalImage" src="assets/About/who.png" alt="Nivas Marketplace" class="contact-modal__image">
+            </div>
+
+            <div class="contact-modal__content">
+                <div class="contact-form">
+                    <div class="contact-form__header">
+                        <h1 class="contact-form__title contenttitle titlecolour">Who We Are</h1>
+                    </div>
+
+                    <div class="contact-form__intro"
+                        style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                        <p class="contact-form__text contentp">
+                            Nivas is an exclusive Celebrity to Consumer marketplace. Our platform allows
+                            your brand
+                            to take the center stage.
+                        </p>
+                        <p class="contact-form__text contentp1">
+                            We aim to connect everyday consumers with their favourite superstar's brand.
+                            Our vision
+                            is to take your brand to the global stage, competing with the biggest labels
+                            in the
+                            world.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/home.js"></script>
+    <!-- <script src="/js/blog-content-manager.js"></script> -->
+    <script src="/js/modal.js"></script>
+    <script src="/js/contend.js"></script>
+
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+
+            navbarToggler.addEventListener('click', function () {
+                if (navbarCollapse.classList.contains('show')) {
+                    navbarCollapse.style.transform = 'translateY(100%)';
+                    setTimeout(() => {
+                        navbarCollapse.classList.remove('show');
+                    }, 500);
+                } else {
+                    navbarCollapse.classList.add('show');
+                    navbarCollapse.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const nivasLogo = document.getElementById('reload');
+            if (nivasLogo) {
+                nivasLogo.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    window.location.reload();
+                });
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Modal elements
+            const modal = document.getElementById('leadershipModal');
+            if (!modal) {
+                console.error('Leadership modal not found');
+                return;
+            }
+
+            // Get all trigger elements
+            const teamTriggers = document.querySelectorAll('a[data-modal-target="leadership"]');
+            if (teamTriggers.length === 0) {
+                console.error('No leadership modal triggers found');
+                return;
+            }
+
+            const modalWrapper = modal.querySelector('.leadership-modal__container');
+            const dragHandle = modal.querySelector('.leadership-modal__drag');
+
+            // Carousel elements
+            const cardsContainer = modal.querySelector('.leadership-modal__cards');
+            const prevButton = modal.querySelector('.nav-prev');
+            const nextButton = modal.querySelector('.nav-next');
+            const cards = cardsContainer.querySelectorAll('.leader-card');
+
+            // State variables
+            let startY;
+            let currentY;
+            let initialHeight;
+            let currentCardIndex = 0;
+
+            // Modal open function
+            function openModal(e) {
+                if (e) {
+                    e.preventDefault();
+                }
+                modal.style.display = 'flex';
+                modal.offsetHeight; // Trigger reflow
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                updateNavButtons();
+            }
+
+            // Modal close function
+            function closeModal() {
+                modal.classList.remove('active');
+                modalWrapper.style.transform = '';
+
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }, 500);
+            }
+
+            // Navigation functions
+            function updateNavButtons() {
+                prevButton.style.opacity = currentCardIndex === 0 ? '0.5' : '1';
+                prevButton.style.pointerEvents = currentCardIndex === 0 ? 'none' : 'auto';
+
+                nextButton.style.opacity = currentCardIndex === cards.length - 1 ? '0.5' : '1';
+                nextButton.style.pointerEvents = currentCardIndex === cards.length - 1 ? 'none' : 'auto';
+            }
+
+            function scrollToCard(index) {
+                if (index >= 0 && index < cards.length) {
+                    currentCardIndex = index;
+                    cards[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+                    updateNavButtons();
+                }
+            }
+
+            // Drag handlers
+            function handleDragStart(e) {
+                startY = e.touches ? e.touches[0].clientY : e.clientY;
+                initialHeight = modalWrapper.offsetHeight;
+                modalWrapper.style.transition = 'none';
+
+                document.addEventListener('mousemove', handleDragMove);
+                document.addEventListener('mouseup', handleDragEnd);
+                document.addEventListener('touchmove', handleDragMove);
+                document.addEventListener('touchend', handleDragEnd);
+            }
+
+            function handleDragMove(e) {
+                currentY = e.touches ? e.touches[0].clientY : e.clientY;
+                const deltaY = currentY - startY;
+
+                if (deltaY > 0) {
+                    modalWrapper.style.transform = `translateY(${deltaY}px)`;
+                }
+            }
+
+            function handleDragEnd() {
+                modalWrapper.style.transition = 'transform 0.3s ease-in-out';
+                const deltaY = currentY - startY;
+
+                if (deltaY > initialHeight * 0.3) {
+                    closeModal();
+                } else {
+                    modalWrapper.style.transform = 'translateY(0)';
+                }
+
+                document.removeEventListener('mousemove', handleDragMove);
+                document.removeEventListener('mouseup', handleDragEnd);
+                document.removeEventListener('touchmove', handleDragMove);
+                document.removeEventListener('touchend', handleDragEnd);
+            }
+
+            // Add click handlers for all trigger elements
+            teamTriggers.forEach(trigger => {
+                trigger.addEventListener('click', function (e) {
+                    console.log('Leadership trigger clicked:', trigger);
+                    openModal(e);
+                });
+            });
+
+            // Card Navigation Event Listeners
+            prevButton.addEventListener('click', () => {
+                scrollToCard(currentCardIndex - 1);
+            });
+
+            nextButton.addEventListener('click', () => {
+                scrollToCard(currentCardIndex + 1);
+            });
+
+            // Touch Navigation
+            let touchStartX = null;
+            let touchStartY = null;
+            let isSwiping = false;
+
+            cardsContainer.addEventListener('touchstart', (e) => {
+                touchStartX = e.touches[0].clientX;
+                touchStartY = e.touches[0].clientY;
+                isSwiping = false;
+            });
+
+            cardsContainer.addEventListener('touchmove', (e) => {
+                if (touchStartX === null || touchStartY === null) return;
+
+                const touchCurrentX = e.touches[0].clientX;
+                const touchCurrentY = e.touches[0].clientY;
+                const deltaX = touchStartX - touchCurrentX;
+                const deltaY = touchStartY - touchCurrentY;
+
+                if (!isSwiping && Math.abs(deltaX) > Math.abs(deltaY)) {
+                    isSwiping = true;
+                }
+
+                if (isSwiping) {
+                    e.preventDefault();
+                }
+            });
+
+            cardsContainer.addEventListener('touchend', (e) => {
+                if (touchStartX === null || !isSwiping) return;
+
+                const touchEndX = e.changedTouches[0].clientX;
+                const deltaX = touchStartX - touchEndX;
+
+                if (Math.abs(deltaX) > 50) {
+                    if (deltaX > 0) {
+                        scrollToCard(currentCardIndex + 1);
+                    } else {
+                        scrollToCard(currentCardIndex - 1);
+                    }
+                }
+
+                touchStartX = null;
+                touchStartY = null;
+                isSwiping = false;
+            });
+
+            // Update current card index on scroll
+            cardsContainer.addEventListener('scroll', () => {
+                const cardWidth = cards[0].offsetWidth;
+                currentCardIndex = Math.round(cardsContainer.scrollLeft / cardWidth);
+                updateNavButtons();
+            });
+
+            // Modal Event Listeners
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            modalWrapper.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+
+            dragHandle.addEventListener('mousedown', handleDragStart);
+            dragHandle.addEventListener('touchstart', handleDragStart, { passive: false });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+
+            // Initialize navigation state
+            updateNavButtons();
+            console.log('Leadership modal system initialized with', teamTriggers.length, 'triggers');
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get all elements with the about-modal-target attribute for About Us
+            const modalTriggers = document.querySelectorAll('a[about-modal-target="About Us"]');
+            const modal = document.getElementById('aboutModal');
+
+            // Check if modal exists
+            if (!modal) {
+                console.error('Modal element not found');
+                return;
+            }
+
+            modalTriggers.forEach(trigger => {
+                trigger.addEventListener('click', function (e) {
+                    openModal(e);
+                });
+            });
+
+            const modalWrapper = modal.querySelector('.contact-modal__container');
+            const dragHandle = modal.querySelector('.contact-modal__drag');
+
+            // Drag state variables
+            let startY;
+            let currentY;
+            let initialHeight;
+
+            // Modal open function
+            function openModal(e) {
+                if (e) {
+                    e.preventDefault();
+                }
+                modal.style.display = 'flex';
+                // Trigger reflow
+                modal.offsetHeight;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            // Modal close function
+            function closeModal() {
+                modal.classList.remove('active');
+                modalWrapper.style.transform = '';
+
+                // Wait for animation to complete before hiding
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }, 500);
+            }
+
+            // Drag handlers
+            function handleDragStart(e) {
+                startY = e.touches ? e.touches[0].clientY : e.clientY;
+                initialHeight = modalWrapper.offsetHeight;
+                modalWrapper.style.transition = 'none';
+
+                // Add move and end event listeners
+                document.addEventListener('mousemove', handleDragMove);
+                document.addEventListener('mouseup', handleDragEnd);
+                document.addEventListener('touchmove', handleDragMove);
+                document.addEventListener('touchend', handleDragEnd);
+            }
+
+            function handleDragMove(e) {
+                currentY = e.touches ? e.touches[0].clientY : e.clientY;
+                const deltaY = currentY - startY;
+
+                // Only allow downward drag
+                if (deltaY > 0) {
+                    modalWrapper.style.transform = `translateY(${deltaY}px)`;
+                }
+            }
+
+            function handleDragEnd() {
+                modalWrapper.style.transition = 'transform 0.3s ease-in-out';
+                const deltaY = currentY - startY;
+
+                // Close if dragged down more than 30% of height
+                if (deltaY > initialHeight * 0.3) {
+                    closeModal();
+                } else {
+                    modalWrapper.style.transform = 'translateY(0)';
+                }
+
+                // Remove event listeners
+                document.removeEventListener('mousemove', handleDragMove);
+                document.removeEventListener('mouseup', handleDragEnd);
+                document.removeEventListener('touchmove', handleDragMove);
+                document.removeEventListener('touchend', handleDragEnd);
+            }
+
+            // Add click handlers for all trigger elements
+            modalTriggers.forEach(trigger => {
+                trigger.addEventListener('click', function (e) {
+                    console.log('About trigger clicked:', trigger); // Debug log
+                    openModal(e);
+                });
+            });
+
+            // Close modal when clicking outside
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            // Prevent modal close when clicking inside
+            modalWrapper.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+
+            // Add drag functionality
+            dragHandle.addEventListener('mousedown', handleDragStart);
+            dragHandle.addEventListener('touchstart', handleDragStart);
+
+            // Close on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+
+            // Debug log to confirm script is running
+            console.log('Modal system initialized with', modalTriggers.length, 'triggers');
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get all elements with the about-modal-target attribute
+            const modalTriggers = document.querySelectorAll('[about-modal-target="Who We Are"]');
+            const modal = document.getElementById('whoWeAreModal');
+
+            // Check if modal exists
+            if (!modal) {
+                console.error('Who We Are modal element not found');
+                return;
+            }
+
+            const modalWrapper = modal.querySelector('.contact-modal__container');
+            const dragHandle = modal.querySelector('.contact-modal__drag');
+
+            // Drag state variables
+            let startY;
+            let currentY;
+            let initialHeight;
+
+            // Modal open function
+            function openModal(e) {
+                if (e) {
+                    e.preventDefault();
+                }
+                modal.style.display = 'flex';
+                // Trigger reflow
+                modal.offsetHeight;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            // Modal close function
+            function closeModal() {
+                modal.classList.remove('active');
+                modalWrapper.style.transform = '';
+
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }, 500);
+            }
+
+            // Drag handlers
+            function handleDragStart(e) {
+                startY = e.touches ? e.touches[0].clientY : e.clientY;
+                initialHeight = modalWrapper.offsetHeight;
+                modalWrapper.style.transition = 'none';
+
+                document.addEventListener('mousemove', handleDragMove);
+                document.addEventListener('mouseup', handleDragEnd);
+                document.addEventListener('touchmove', handleDragMove);
+                document.addEventListener('touchend', handleDragEnd);
+            }
+
+            function handleDragMove(e) {
+                currentY = e.touches ? e.touches[0].clientY : e.clientY;
+                const deltaY = currentY - startY;
+
+                if (deltaY > 0) {
+                    modalWrapper.style.transform = `translateY(${deltaY}px)`;
+                }
+            }
+
+            function handleDragEnd() {
+                modalWrapper.style.transition = 'transform 0.3s ease-in-out';
+                const deltaY = currentY - startY;
+
+                if (deltaY > initialHeight * 0.3) {
+                    closeModal();
+                } else {
+                    modalWrapper.style.transform = 'translateY(0)';
+                }
+
+                document.removeEventListener('mousemove', handleDragMove);
+                document.removeEventListener('mouseup', handleDragEnd);
+                document.removeEventListener('touchmove', handleDragMove);
+                document.removeEventListener('touchend', handleDragEnd);
+            }
+
+            // Add click handlers for all trigger elements
+            modalTriggers.forEach(trigger => {
+                trigger.addEventListener('click', function (e) {
+                    console.log('Modal trigger clicked:', trigger);
+                    openModal(e);
+                });
+            });
+
+            // Close modal when clicking outside
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            // Prevent modal close when clicking inside
+            modalWrapper.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+
+            // Add drag functionality
+            dragHandle.addEventListener('mousedown', handleDragStart);
+            dragHandle.addEventListener('touchstart', handleDragStart);
+
+            // Close on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+
+            console.log('Modal system initialized with', modalTriggers.length, 'triggers');
+        });
+    </script>
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Elements
+            const themeSwitch = document.getElementById("themeSwitch");
+            const themeSwitchMobile = document.getElementById("themeSwitchMobile");
+            const modeText = document.querySelectorAll(".mode-text");
+            const navbarToggler = document.querySelector(".navbar-toggler");
+            const navbarCollapse = document.querySelector(".navbar-collapse");
+            const navbar = document.querySelector(".navbar");
+            let isMenuOpen = false;
+
+            // Theme Management
+            function updateTheme(isDark) {
+                document.body.classList.toggle("dark-mode", isDark);
+                const mode = isDark ? "Light" : "Dark";
+                modeText.forEach((text) => (text.textContent = `${mode} Mode`));
+                localStorage.setItem("theme", isDark ? "dark" : "light");
+                themeSwitch.checked = !isDark;
+                themeSwitchMobile.checked = !isDark;
+
+                const nivasLogo = document.getElementById("nivasLogo");
+                if (nivasLogo) {
+                    nivasLogo.style.filter = isDark
+                        ? "brightness(0) saturate(100%) invert(29%) sepia(0%) saturate(0%) hue-rotate(202deg) brightness(96%) contrast(93%)"
+                        : "invert(0)";
+                }
+            }
+
+            // Initialize theme
+            const savedTheme = localStorage.getItem("theme") || "light";
+            updateTheme(savedTheme === "dark");
+
+            // Theme switch handlers
+            [themeSwitch, themeSwitchMobile].forEach((switchElement) => {
+                if (switchElement) {
+                    switchElement.addEventListener("change", function () {
+                        updateTheme(!this.checked);
+                    });
+                }
+            });
+
+            // Mobile menu animation
+            function toggleMenu(force = null) {
+                isMenuOpen = force !== null ? force : !isMenuOpen;
+
+                if (isMenuOpen) {
+                    navbarCollapse.style.display = 'block';
+                    requestAnimationFrame(() => {
+                        navbarCollapse.style.transform = 'translateY(0)';
+                        navbarCollapse.style.opacity = '1';
+                    });
+                } else {
+                    navbarCollapse.style.transform = 'translateY(-100%)';
+                    navbarCollapse.style.opacity = '0';
+                    setTimeout(() => {
+                        navbarCollapse.style.display = 'none';
+                    }, 300);
+                }
+
+                navbarCollapse.classList.toggle("show", isMenuOpen);
+                document.body.style.overflow = isMenuOpen ? "hidden" : "";
+                navbarToggler.setAttribute("aria-expanded", isMenuOpen.toString());
+            }
+
+            // Navbar scroll behavior
+            function handleScroll() {
+                const scrollPosition = window.scrollY;
+                if (scrollPosition > 50) {
+                    navbar.style.background = 'rgba(0, 0, 0, 0.95)';
+                    navbar.style.backdropFilter = 'blur(10px)';
+                } else {
+                    navbar.style.background = 'transparent';
+                    navbar.style.backdropFilter = 'none';
+                }
+            }
+
+            // Event Listeners
+            navbarToggler.addEventListener("click", () => toggleMenu());
+
+            // Handle dropdown clicks on mobile
+            document.querySelectorAll('.dropdown-toggle').forEach(dropdown => {
+                dropdown.addEventListener('click', function (e) {
+                    if (window.innerWidth <= 991) {
+                        e.preventDefault();
+                        const dropdownMenu = this.nextElementSibling;
+                        dropdownMenu.style.display =
+                            dropdownMenu.style.display === 'none' ? 'block' : 'none';
+                    }
+                });
+            });
+
+            // Close menu when clicking links
+            document.querySelectorAll(".dropdown-item").forEach((link) => {
+                link.addEventListener("click", () => {
+                    if (window.innerWidth <= 991) {
+                        toggleMenu(false);
+                    }
+                });
+            });
+
+            // Close menu on outside click
+            document.addEventListener("click", (e) => {
+                if (isMenuOpen &&
+                    !navbarCollapse.contains(e.target) &&
+                    !navbarToggler.contains(e.target)) {
+                    toggleMenu(false);
+                }
+            });
+
+            // Close menu on ESC key
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape" && isMenuOpen) {
+                    toggleMenu(false);
+                }
+            });
+
+            // Handle window resize
+            let resizeTimer;
+            window.addEventListener("resize", () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => {
+                    if (window.innerWidth > 991 && isMenuOpen) {
+                        toggleMenu(false);
+                    }
+                }, 250);
+            });
+
+            // Initialize scroll handler
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // Initial call
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const loaderWrapper = document.querySelector('.loader-wrapper');
+            const contentWrapper = document.querySelector('.content-wrapper');
+
+            // Ensure all images, scripts, and other resources are loaded
+            window.addEventListener('load', function () {
+                // Add fade-out class to loader
+                loaderWrapper.classList.add('fade-out');
+
+                // Show content
+                contentWrapper.classList.add('visible');
+
+                // Remove loader from DOM after animation
+                setTimeout(() => {
+                    loaderWrapper.style.display = 'none';
+                }, 500);
+            });
+        });
+    </script>
+
+
+
+
+
+
+    <script>
+        function toggleShareMenu(button) {
+            const shareMenu = button.nextElementSibling;
+            shareMenu.classList.toggle('active');
+        }
+
+        // Close share menu when clicking outside
+        document.addEventListener('click', function (event) {
+            const shareMenus = document.querySelectorAll('.share-menu');
+            const shareButtons = document.querySelectorAll('.share-btn');
+
+            if (!event.target.closest('.share-btn') && !event.target.closest('.share-menu')) {
+                shareMenus.forEach(menu => menu.classList.remove('active'));
+            }
+        });
+    </script>
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKFWS7H9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+</body>
+
+</html>
